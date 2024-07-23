@@ -15,9 +15,17 @@ def dia_de_hoy(request):
     return HttpResponse(texto)
 
 def probando_template(request):
+    nombre = "Matias"
+    apellido = "Henquin"
+    diccionario = {
+        "nombre": nombre,
+        "apellido": apellido,
+        "notas": [4, 8, 9, 10, 7, 8]
+    }
     mi_html = open('./Clases_coder/plantillas/index.html')
     plantilla = Template(mi_html.read())
     mi_html.close()
-    mi_contexto = Context()
+    mi_contexto = Context(diccionario)
     documento = plantilla.render(mi_contexto)
     return HttpResponse(documento)
+ 

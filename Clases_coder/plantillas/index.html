@@ -6,8 +6,14 @@
     <title>Document</title>
 </head>
 <body>
-    Escuchen, corran la bola<br> Juegan en francia pero son todos de angola<br>que lindo es, van a correr, son come traba como el puto de mbappe.<br> Su vieja es nigeriana, su viejo camerunes, pero en el documento, nacionalidad frances
+    <p style="color: rgb(255, 0, 0)"> Escuchen {{nombre}}, corran la bola, juegan en francia pero son todos de angola</p>
+    <p style="color: rgb(0, 41, 128)">Que lindo es, verlos correr"{{apellido}}" son come traba como el puto de mbappe.<br>
+    También aplicamos estilos pero luego lo haremos con CSS porque no es buena práctica hacerlo en el archivo html.</p>
+
+    <h2>Notas:</h2>
+    {%for nota in notas %}
+      <p>Nota: {{nota}}</p>
+    {% endfor % }
 </body>
-,
 </html>
 
